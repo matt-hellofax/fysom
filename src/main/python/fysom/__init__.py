@@ -139,9 +139,9 @@ class Fysom(object):
                     self._after_event(e)
                 self.transition = _tran
 
-            if self._leave_state(e) is not False:
-                if hasattr(self, 'transition'):
-                    self.transition()
+                if self._leave_state(e) is not False:
+                    if hasattr(self, 'transition'):
+                        self.transition()
 
         return fn
 
